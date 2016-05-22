@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap>
+	<!-- 通过typeAlias使得我们在下面使用User实体类的时候不需要写包名 -->
+	<typeAlias alias="User" type="com.sbs.edu.basic.entity.User" />
+	<select id="selectUserByName" resultClass="User">
+		select * from t_user
+		where name=#name#
+	</select>
+
+	<insert id="addUser" parameterClass="User">
+		<selectKey resultClass="String" keyProperty="id">
+			select seq_t_user.nextval as id from dual
+		</selectKey>
+		insert into t_user values (#id#, #name#, #password#)
+	</insert>
+</sqlMap>

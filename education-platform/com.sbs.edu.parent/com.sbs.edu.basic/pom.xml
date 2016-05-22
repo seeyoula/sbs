@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.sbs.edu</groupId>
+		<artifactId>com.sbs.edu.parent</artifactId>
+		<version>${edu.version}</version>
+	</parent>
+	<artifactId>com.sbs.edu.basic</artifactId>
+	<packaging>jar</packaging>
+
+	<properties>
+		<org.springframework.version>4.2.2.RELEASE</org.springframework.version>
+		<org.apache.struts.version>2.3.24</org.apache.struts.version>
+	</properties>
+
+	<dependencies>
+		<!-- struts config -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>${org.apache.struts.version}</version>
+		</dependency>
+
+		<!-- spring config -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<!-- Struts2和Spring整合插件 -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+			<version>2.3.4.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-ibatis</artifactId>
+			<version>2.0.8</version>
+		</dependency>
+
+		<!-- ibatis -->
+		<dependency>
+			<groupId>com.ibatis</groupId>
+			<artifactId>ibatis-sqlmap</artifactId>
+			<version>2.1.0.565</version>
+		</dependency>
+
+		<!-- dbcp链接池 -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+		<!-- log4j <dependency> <groupId>log4j</groupId> <artifactId>log4j</artifactId> 
+			<version>1.2.9</version> </dependency> -->
+
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.12.1.GA</version>
+		</dependency>
+
+		<!-- jdbc driver -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sbs.edu</groupId>
+			<artifactId>com.sbs.edu.common</artifactId>
+			<version>${edu.version}</version>
+		</dependency>
+	</dependencies>
+</project>
