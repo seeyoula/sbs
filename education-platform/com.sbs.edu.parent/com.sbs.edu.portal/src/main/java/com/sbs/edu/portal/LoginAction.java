@@ -8,6 +8,8 @@
  */
 package com.sbs.edu.portal;
 
+import com.opensymphony.xwork2.ActionSupport;
+
 /**
  * TODO 添加类的一句话简单描述。
  * <p>
@@ -21,7 +23,11 @@ package com.sbs.edu.portal;
  * @version    SBS V001R001 2016年5月22日
  * @since      SBS V001R001C00
  */
-public class LoginAction
+public class LoginAction extends ActionSupport
 {
+    /**
+     * 序列化
+     */
+    private static final long serialVersionUID = 1L;
     
 }
