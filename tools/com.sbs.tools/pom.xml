@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.sbs.tools</groupId>
+	<artifactId>com.sbs.tools</artifactId>
+	<version>${sbs.version}</version>
+	<packaging>pom</packaging>
+	<name>com.sbs.tools</name>
+	<description>工具包</description>
+	
+	<modules>
+		<module>com.sbs.tools.poi</module>
+	</modules>
+	
+	<properties>
+		<sbs.version>1.0.0.SNAPSHOT</sbs.version>
+		<poi.version>3.14</poi.version>
+	</properties>
+	
+</project>
