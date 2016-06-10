@@ -8,14 +8,15 @@
  */
 package com.sbs.edu.portal;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- * TODO 添加类的一句话简单描述。
+ * 登陆模块
  * <p>
- * TODO 详细描述
+ * 用于验证用户登录状态
  * <p>
- * TODO 示例代码
+ * execute
  * <pre>
  * </pre>
  * 
@@ -30,4 +31,13 @@ public class LoginAction extends ActionSupport
      */
     private static final long serialVersionUID = 1L;
     
+    /** 
+     * {@inheritDoc} 
+     */
+    @Override
+    public String execute() throws Exception
+    {
+        System.out.println(ActionContext.getContext().get(""));
+        return super.execute();
+    }
 }

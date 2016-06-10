@@ -46,7 +46,8 @@ public class RegisterAction extends ActionSupport
         User user1 = userService.getUserByName(user.getName());
         if (null != user1)
         {
-            return SUCCESS;
+            // 已经存在用户
+            return ERROR;
         }
         else if (!userService.addUser(user))
         {
