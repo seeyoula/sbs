@@ -2,7 +2,7 @@
 <Configuration status="off" monitorInterval="1800">
 	<properties>
 		<property name="LOG_HOME">logs</property>
-		<property name="FILE_NAME">mylog</property>
+		<property name="FILE_NAME">edu_log</property>
 	</properties>
 
 	<Appenders>
@@ -10,7 +10,7 @@
 			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
 		</Console>
 
-		<RollingRandomAccessFile name="running-log"
+		<RollingRandomAccessFile name="edu_log"
 			fileName="${LOG_HOME}/${FILE_NAME}.log"
 			filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME}-%d{yyyy-MM-dd}-%i.log.gz">
 			<PatternLayout
@@ -24,8 +24,8 @@
 	</Appenders>
 
 	<Loggers>
-		<Logger name="com.sbs.edu" level="trace" additivity="true">
-			<AppenderRef ref="running-log" />
+		<Logger name="com.sbs.edu" level="debug" additivity="true">
+			<AppenderRef ref="edu_log" />
 		</Logger>
 		<Root level="debug">
 			<AppenderRef ref="Console" />

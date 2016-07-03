@@ -30,63 +30,64 @@ public class Log4jTest
     
     public static void main(String[] args)
     {
+        logger.trace("trace message");
         for (int i = 0; i < 1000; i++)
         {
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.trace("trace message");
-            logger.debug("debug message");
-            logger.info("info message");
-            logger.warn("warn message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.error("error message");
-            logger.fatal("fatal message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.trace("trace message");
+//            logger.debug("debug message");
+//            logger.info("info message");
+//            logger.warn("warn message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.error("error message");
+//            logger.fatal("fatal message");
             System.out.println("Hello World!");
             
-            for (int j = 0; j < 10; j++)
-            {
-                logger.trace("trace message " + i);
-                logger.debug("debug message " + i);
-                logger.info("info message " + i);
-                logger.warn("warn message " + i);
-                logger.error("error message " + i);
-                logger.fatal("fatal message " + i);
-            }
+//            for (int j = 0; j < 10; j++)
+//            {
+//                logger.trace("trace message " + i);
+//                logger.debug("debug message " + i);
+//                logger.info("info message " + i);
+//                logger.warn("warn message " + i);
+//                logger.error("error message " + i);
+//                logger.fatal("fatal message " + i);
+//            }
             System.out.println("Hello World! 2");
         }
     }

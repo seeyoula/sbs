@@ -4,6 +4,12 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+	<package name="default" extends="struts-default">
+		<interceptors>
+			<interceptor name="timer" class=".." />
+			<interceptor name="logger" class=".." />
+		</interceptors>
+	</package>
 	<constant name="struts.objectFactory" value="spring" />
 
 	<!-- 指定全局国际化资源文件 -->
@@ -13,21 +19,9 @@
 	<constant name="struts.i18n.encoding" value="GBK" />
 
 	<package name="edu" namespace="" extends="struts-default">
-
 		<action name="register" class="registerAction" method="register">
 			<result name="error">/error.jsp</result>
 			<result name="success">/welcome.jsp</result>
 		</action>
-
-<!-- 		<action name="student" class="studentAction"> -->
-<!-- 			<result>/jsp/student/studentList.jsp</result> -->
-<!-- 		</action> -->
 	</package>
-
-<!-- 	<package name="oa" namespace="/oa" extends="struts-default"> -->
-<!-- 		<action name="recognize" class="criticismAction"> -->
-<!-- 			<result name="error">/error.jsp</result> -->
-<!-- 			<result name="success">/welcome.jsp</result> -->
-<!-- 		</action> -->
-<!-- 	</package> -->
 </struts>  

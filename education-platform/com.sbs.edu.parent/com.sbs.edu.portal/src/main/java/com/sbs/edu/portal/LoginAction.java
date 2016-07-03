@@ -8,7 +8,6 @@
  */
 package com.sbs.edu.portal;
 
-import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -37,7 +36,6 @@ public class LoginAction extends ActionSupport
     @Override
     public String execute() throws Exception
     {
-        System.out.println(ActionContext.getContext().get(""));
         return super.execute();
     }
 }
