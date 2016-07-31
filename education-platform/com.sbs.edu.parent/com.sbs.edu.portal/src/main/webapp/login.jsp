@@ -49,7 +49,7 @@
 	        errorMsg = "账号或者密码错误！";
 	    }
 	%>
-	<form method="post" action="<%=path%>/doLogin.servlet" name="login_form"
+	<form method="post" action="<%=path%>/login.action" name="login_form" style="margin-top: 200px;"
 		id="login_form">
 		<table border="1" cellpadding="0" cellspacing="0" id="table_body">
 			<tr>

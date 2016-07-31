@@ -59,7 +59,6 @@ public class UserDAOImpl implements IUserDAO
      */
     public boolean delUser(Integer id)
     {
-        // TODO Auto-generated method stub
         return false;
     }
     
@@ -68,7 +67,6 @@ public class UserDAOImpl implements IUserDAO
      */
     public boolean update(User user)
     {
-        // TODO Auto-generated method stub
         return false;
     }
     
@@ -77,7 +75,6 @@ public class UserDAOImpl implements IUserDAO
      */
     public List<User> queryAllUsers()
     {
-        // TODO Auto-generated method stub
         return null;
     }
 }

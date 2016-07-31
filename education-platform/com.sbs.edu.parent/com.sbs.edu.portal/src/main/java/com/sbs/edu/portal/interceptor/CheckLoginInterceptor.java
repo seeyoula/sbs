@@ -10,8 +10,12 @@ package com.sbs.edu.portal.interceptor;
 
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
+import com.sbs.edu.basic.entity.User;
 import com.sbs.edu.portal.LoginAction;
 
 /**
@@ -29,40 +33,58 @@ import com.sbs.edu.portal.LoginAction;
  */
 public class CheckLoginInterceptor extends AbstractInterceptor
 {
+    private static Logger LOGGER = LogManager.getLogger(CheckLoginInterceptor.class);
+    
     /**
      * TODO 添加字段注释
      */
     private static final long serialVersionUID = 1L;
     
-    public static final String LOGIN_KEY = "LOGIN";
+    public static final String LOGIN_KEY = "user";
     
-    public static final String LOGIN_PAGE = "global.login";
+    public static final String LOGIN_PAGE = "login.action";
     
+    /** 
+     * {@inheritDoc} 
+     */
+    @Override
     public String intercept(ActionInvocation actionInvocation) throws Exception
     {
-        System.out.println("begin check login interceptor!");
+        if (LOGGER.isDebugEnabled())
+        {
+            LOGGER.debug("begin check login interceptor!");
+        }
         
         // 对LoginAction不做该项拦截
         Object action = actionInvocation.getAction();
         if (action instanceof LoginAction)
         {
-            System.out.println("exit check login, because this is login action.");
+            if (LOGGER.isDebugEnabled())
+            {
+                LOGGER.debug("exit check login, because this is login action.");
+            }
             return actionInvocation.invoke();
         }
         
         // 确认Session中是否存在LOGIN
         Map<?, ?> session = actionInvocation.getInvocationContext().getSession();
-        String login = (String)session.get(LOGIN_KEY);
-        if (login != null && login.length() > 0)
+        User loginUser = (User)session.get(LOGIN_KEY);
+        if (null != loginUser)
         {
             // 存在的情况下进行后续操作。
-            System.out.println("already login!");
+            if (LOGGER.isDebugEnabled())
+            {
+                LOGGER.debug("already login!");
+            }
             return actionInvocation.invoke();
         }
         else
         {
             // 否则终止后续操作，返回LOGIN
-            System.out.println("no login, forward login page!");
+            if (LOGGER.isDebugEnabled())
+            {
+                LOGGER.debug("no login, forward login page!");
+            }
             return LOGIN_PAGE;
         }
     }

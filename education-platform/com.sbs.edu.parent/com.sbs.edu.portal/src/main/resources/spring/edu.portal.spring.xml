@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPTRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
+	<bean name="loginAction" class="com.sbs.edu.portal.LoginAction">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	
 	<bean name="registerAction" class="com.sbs.edu.portal.RegisterAction">
 		<property name="userService" ref="userService"></property>
 	</bean>
 
-<!-- 	<bean name="studentAction" class="com.sbs.xmove.portal.action.StudentAction"> -->
-<!-- 		<property name="studentService" ref="studentService" /> -->
-<!-- 	</bean> -->
-<!-- 	<bean name="criticismAction" class="com.sbs.xmove.portal.oa.CriticismAction" /> -->
+	<!-- <bean name="studentAction" class="com.sbs.xmove.portal.action.StudentAction"> -->
+	<!-- <property name="studentService" ref="studentService" /> -->
+	<!-- </bean> -->
+	<!-- <bean name="criticismAction" class="com.sbs.xmove.portal.oa.CriticismAction" 
+		/> -->
 </beans>

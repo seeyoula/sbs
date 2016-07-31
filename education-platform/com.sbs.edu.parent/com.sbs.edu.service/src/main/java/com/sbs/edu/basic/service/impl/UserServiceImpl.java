@@ -10,6 +10,9 @@ package com.sbs.edu.basic.service.impl;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.sbs.edu.basic.dao.IUserDAO;
 import com.sbs.edu.basic.entity.User;
 import com.sbs.edu.basic.service.IUserService;
@@ -29,6 +32,11 @@ import com.sbs.edu.basic.service.IUserService;
  */
 public class UserServiceImpl implements IUserService
 {
+    /**
+     * 打印日志
+     */
+    private static Logger LOGGER = LogManager.getLogger(UserServiceImpl.class);
+    
     private IUserDAO userDAO;
     
     /** 
@@ -37,7 +45,16 @@ public class UserServiceImpl implements IUserService
     @Override
     public User getUserByName(String name)
     {
-        return userDAO.getUserByName(name);
+        if (LOGGER.isDebugEnabled())
+        {
+            LOGGER.debug("start query user by username : " + name);
+        }
+        User user = userDAO.getUserByName(name);
+        if (LOGGER.isDebugEnabled())
+        {
+            LOGGER.debug("Query user by username result : " + user);
+        }
+        return user;
     }
     
     /** 
