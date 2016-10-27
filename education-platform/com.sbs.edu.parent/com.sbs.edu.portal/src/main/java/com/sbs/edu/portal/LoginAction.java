@@ -87,7 +87,7 @@ public class LoginAction extends ActionSupport
             session.setAttribute("user", user);
             return SUCCESS;
         }
-        
+        LOGGER.error("username or password is not correct, please check and login again!");
         return ERROR;
     }
     

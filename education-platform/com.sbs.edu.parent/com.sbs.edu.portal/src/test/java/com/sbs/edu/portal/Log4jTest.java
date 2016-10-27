@@ -79,15 +79,15 @@ public class Log4jTest
 //            logger.fatal("fatal message");
             System.out.println("Hello World!");
             
-//            for (int j = 0; j < 10; j++)
-//            {
-//                logger.trace("trace message " + i);
-//                logger.debug("debug message " + i);
-//                logger.info("info message " + i);
-//                logger.warn("warn message " + i);
-//                logger.error("error message " + i);
-//                logger.fatal("fatal message " + i);
-//            }
+            for (int j = 0; j < 10; j++)
+            {
+                logger.trace("trace message " + i);
+                logger.debug("debug message " + i);
+                logger.info("info message " + i);
+                logger.warn("warn message " + i);
+                logger.error("error message " + i);
+                logger.fatal("fatal message " + i);
+            }
             System.out.println("Hello World! 2");
         }
     }
