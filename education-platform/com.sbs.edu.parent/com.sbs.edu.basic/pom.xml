@@ -34,6 +34,11 @@
 			<artifactId>spring-web</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
 
 		<!-- Struts2和Spring整合插件 -->
 		<dependency>
@@ -78,10 +83,15 @@
 		</dependency>
 
 		<!-- jdbc driver -->
-		<dependency>
+		<!--<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
 			<version>11.2.0</version>
+		</dependency>-->
+		<dependency>
+			<groupId>ojdbc</groupId>
+			<artifactId>ojdbc</artifactId>
+			<version>10.2.0.4.0</version>
 		</dependency>
 
 		<dependency>

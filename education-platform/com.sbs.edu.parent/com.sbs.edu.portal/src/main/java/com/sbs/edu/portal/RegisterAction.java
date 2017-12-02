@@ -40,7 +40,7 @@ public class RegisterAction extends ActionSupport
     {
         return SUCCESS;
     }
-    
+
     public String register()
     {
         User user1 = userService.getUserByName(user.getName());
