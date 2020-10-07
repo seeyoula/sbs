@@ -4,3 +4,7 @@
 **/target/*
 **/.idea
 **/*.iml
+configuration
+p2
+workspace
+artifacts.xml

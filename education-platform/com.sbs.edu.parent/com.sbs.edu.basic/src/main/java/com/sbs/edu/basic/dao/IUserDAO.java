@@ -1,6 +1,6 @@
 /*
  * 文件名：UserDAO.java
- * 版权：Copyright 2015-2016 SBS Tech. Co. Ltd. All Rights Reserved. 
+ * 版权：Copyright 2015-2016 SBS Tech. Co. Ltd. All Rights Reserved.
  * 描述： UserDAO.java
  * 修改人：Administrator
  * 修改时间：2016年3月23日
@@ -20,16 +20,15 @@ import com.sbs.edu.basic.entity.User;
  * TODO 示例代码
  * <pre>
  * </pre>
- * 
- * @author     Administrator
- * @version    SBS V001R001 2016年3月23日
- * @since      SBS V001R001C00
+ *
+ * @author Administrator
+ * @version SBS V001R001 2016年3月23日
+ * @since SBS V001R001C00
  */
-public interface IUserDAO
-{
+public interface IUserDAO {
     /**
      * 根据用户名查询用户信息。
-     * 
+     *
      * @param name 用户名
      * @return 用户
      */
@@ -37,31 +36,31 @@ public interface IUserDAO
     
     /**
      * 添加用户信息。
-     * 
+     *
      * @param user 用户信息
      * @return 添加结果：true, 成功；false, 失败
      */
     boolean addUser(User user);
-    
+
     /**
      * 销户。
-     * 
+     *
      * @param id 根据用户id进行删除
      * @return 删除结果：true, 成功；false, 失败
      */
     boolean delUser(Integer id);
-    
+
     /**
      * 更新用户信息
-     * 
+     *
      * @param user 用户信息
      * @return 更新结果 ：true, 成功；false, 失败
      */
     boolean update(User user);
-    
+
     /**
      * 查询所有用户
-     * 
+     *
      * @return 用户列表
      */
     List<User> queryAllUsers();
