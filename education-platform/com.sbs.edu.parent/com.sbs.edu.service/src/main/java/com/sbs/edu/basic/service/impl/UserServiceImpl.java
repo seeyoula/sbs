@@ -1,6 +1,6 @@
 /*
  * 文件名：UserServiceImpl.java
- * 版权：Copyright 2015-2016 SBS Tech. Co. Ltd. All Rights Reserved. 
+ * 版权：Copyright 2015-2016 SBS Tech. Co. Ltd. All Rights Reserved.
  * 描述： UserServiceImpl.java
  * 修改人：Administrator
  * 修改时间：2016年5月15日
@@ -25,81 +25,71 @@ import com.sbs.edu.basic.service.IUserService;
  * TODO 示例代码
  * <pre>
  * </pre>
- * 
- * @author     Administrator
- * @version    SBS V001R001 2016年5月15日
- * @since      SBS V001R001C00
+ *
+ * @author Administrator
+ * @version SBS V001R001 2016年5月15日
+ * @since SBS V001R001C00
  */
-public class UserServiceImpl implements IUserService
-{
+public class UserServiceImpl implements IUserService {
     /**
      * 打印日志
      */
-    private static Logger LOGGER = LogManager.getLogger(UserServiceImpl.class);
-    
+    private final static Logger LOGGER = LogManager.getLogger(UserServiceImpl.class);
+
     private IUserDAO userDAO;
-    
-    /** 
-     * {@inheritDoc} 
+
+    /**
+     * {@inheritDoc}
      */
     @Override
-    public User getUserByName(String name)
-    {
-        if (LOGGER.isDebugEnabled())
-        {
-            LOGGER.debug("start query user by username : " + name);
+    public User getUserByName(String name) {
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("start query user by username : {}", name);
         }
         User user = userDAO.getUserByName(name);
-        if (LOGGER.isDebugEnabled())
-        {
-            LOGGER.debug("Query user by username result : " + user);
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("Query user by username result : {}", user);
         }
         return user;
     }
-    
-    /** 
-     * {@inheritDoc} 
+
+    /**
+     * {@inheritDoc}
      */
     @Override
-    public boolean addUser(User user)
-    {
+    public boolean addUser(User user) {
         return userDAO.addUser(user);
     }
-    
-    /** 
-     * {@inheritDoc} 
+
+    /**
+     * {@inheritDoc}
      */
     @Override
-    public boolean delUser(Integer id)
-    {
+    public boolean delUser(Integer id) {
         return false;
     }
-    
-    /** 
-     * {@inheritDoc} 
+
+    /**
+     * {@inheritDoc}
      */
     @Override
-    public boolean update(User user)
-    {
+    public boolean update(User user) {
         return false;
     }
-    
-    /** 
-     * {@inheritDoc} 
+
+    /**
+     * {@inheritDoc}
      */
     @Override
-    public List<User> queryAllUsers()
-    {
+    public List<User> queryAllUsers() {
         return null;
     }
-    
-    public IUserDAO getUserDAO()
-    {
+
+    public IUserDAO getUserDAO() {
         return userDAO;
     }
-    
-    public void setUserDAO(IUserDAO userDAO)
-    {
+
+    public void setUserDAO(IUserDAO userDAO) {
         this.userDAO = userDAO;
     }
 }
